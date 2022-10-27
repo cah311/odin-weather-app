@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
     <title>Weather App</title>
   </head>
   <body>
-    <script src="index.js"></script>
+    <div class="search-container">
+      <label for="search">Search Location</label>
+      <input type="search" id="search" data-location-search />
+      <button onclick="getWeather()" id="city-submit">Search</button>
+    </div>
+    <div class="location-display"></div>
+    <template data-location-template>
+      <div class="location-info">
+        <div class="header"></div>
+        <div class="body"></div>
+      </div>
+    </template>
+
+    <button onclick="getTime()">Time</button>
   </body>
 </html>
